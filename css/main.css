@@ -1,0 +1,185 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: rgba(92, 219, 219, 0.5);
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.8;
+  color: #0f0e0e;
+  padding: 20px;
+}
+header,
+main,
+footer {
+  max-width: 1000px;
+  margin: 0 auto 40px auto;
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+h1{
+  text-align: center;
+  color: #008b8b;
+  margin-bottom: 20px;
+}
+.main-visual{
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 700px;
+  height: auto;
+}
+
+main{
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.intro{
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+section{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  align-items: center;
+  background: #fafafa;
+  padding: 25px;
+  border-radius: 10px;
+}
+section h2{
+  grid-column: 1/-1;
+  color: #8b1c00;
+  border-left: 5px solid#8b1c00;
+  padding-left: 15px;
+  font-size: 1.6rem;
+}
+img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+}
+.life-section{
+  grid-template-areas: 
+  "title title"
+  "image text";
+}
+.life-section h2{
+  grid-area: title;
+}
+.life-image{
+  grid-area: image;
+}
+.life-text{
+  grid-area: text;
+}
+.hobby-section{
+  grid-template-areas: 
+  "title title"
+  "text image";
+}
+.hobby-section h2{
+  grid-area: title;
+}
+.hobby-image{
+  grid-area: image;
+}
+.hobby-text{
+  grid-area: text;
+}
+
+.food-section{
+  grid-template-areas: 
+  "title title"
+  "image text";
+}
+.food-section h2{
+  grid-area: title;
+}
+.food-image{
+  grid-area: image;
+}
+.food-text{
+  grid-area: text;
+}
+.artist-section{
+  grid-template-areas: 
+  "title title"
+  "image text";
+}
+.artist-section h2{
+  grid-area: title;
+}
+.artist-image{
+  grid-area: image;
+  max-width: 300px;
+  justify-self: center;
+}
+.artist-text{
+  grid-area: text;
+}
+
+ul,
+ol {
+  margin-left: 20px;
+}
+
+li {
+  margin-bottom: 8px;
+}
+a {
+  color: #007777;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s;
+}
+
+a:hover {
+  color: #f38c06;
+  text-decoration: underline;
+}
+.more-link{
+  margin-top: 15px;
+}
+details {
+  background: #f9f9f9;
+  padding: 15px;
+  margin-top: 10px;
+  border-radius: 8px;
+}
+
+
+summary {
+  font-weight: bold;
+  color: #444;
+}
+
+footer {
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  section {
+    grid-template-columns: 1fr;
+  }
+
+  .life-section,
+  .hobby-section,
+  .food-section,
+  .artist-section{
+    grid-template-areas: 
+    "title"
+    "image"
+    "text";
+  }
+
+  body {
+    padding: 10px;
+  }
+}
